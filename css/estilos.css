@@ -4,14 +4,41 @@ dentro de las hojas de estilo tenemos:
 eitquetas<--alfabeticamente
 identificadores
 clases 
-pseudoelementis
+pseudoelementos
 
 En ese orden*/
 body
 {
-	background: rgb(255,255,255); /*fondo*/
+	background: rgb(100,100,100); /*fondo*/
 	max-width: 1024px; /*ancho maximo*/
 	margin:0 auto; /*el cero inidica que no hya movimiento arriba o abajo
 	el auto se refiere a que de izquierda a derecha se mueva de forma equitativa*/
 	color:#000000 ;/*letra*/
+}
+header
+{
+	background: #0080FF;     /*fondo */       
+
+	border: 1px solid black; /*alrededor*/
+	border-radius: 10px; /*esquinas*/
+	color: white; /*letras*/
+}
+header h1
+{
+text-align: center;
+}
+header nav ul li
+{
+border: 1px solid red;
+border-radius: 5px;
+margin: 0px 40px;
+background: white;
+color: black;
+padding: 10px;
+display: inline-block;
+}
+header nav ul li:hover
+{
+	background: black;
+	color:white;
 }
