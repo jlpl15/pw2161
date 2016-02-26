@@ -18,27 +18,70 @@ body
 header
 {
 	background: #0080FF;     /*fondo */       
-
 	border: 1px solid black; /*alrededor*/
 	border-radius: 10px; /*esquinas*/
+	box-shadow: 5px 5px black;
 	color: white; /*letras*/
+}
+header img
+{
+border-radius: 100px;
+box-shadow: 5px 5px black;
+float: right;
+margin-right: 20px;
+margin-top: 20px;
+width: 80px;
 }
 header h1
 {
 text-align: center;
+text-shadow: 5px 5px 10px blue;
 }
 header nav ul li
 {
 border: 1px solid red;
 border-radius: 5px;
-margin: 0px 40px;
+box-shadow: 5px 5px black;
 background: white;
 color: black;
-padding: 10px;
 display: inline-block;
+margin: 0px 30px;
+padding: 10px;
 }
 header nav ul li:hover
 {
 	background: black;
 	color:white;
 }
+
+/*Aqui van los id's*/
+#seccion1
+{
+	border: 10px solid red;
+}
+#seccion1 article
+{
+	border: 10px solid black;
+	display: inline-block;
+	vertical-align: top;
+	width: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
