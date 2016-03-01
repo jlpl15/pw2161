@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio y video</title>
+</head>
+<body>
+	<!-- controls integra las barra de reproduccion
+	preload deja que vaya cargando el video
+	autoplay reproduce el video automaticamente
+	loop hae que al terminar se vuelva a reproducir -->
+	<video controls preload autoplay loop >
+		<!-- el parametro type es para los buscadores. -->
+		<source src="media/video/Chrome_ImF.mp4" type="video/mp4"/>
+		<source src="media/video/Chrome_ImF.ogv" type="video/ogg"/>
+		<source src="media/video/Chrome_ImF.webm" type="video/webm"/>
+		Tu navegador no soporta esta característica :'(
+	</video>
+	<video controls preload  loop >
+		<!-- el parametro type es para los buscadores. -->
+		<source src="media/video/html5.mp4" type="video/mp4"/>
+		<source src="media/video/html5.webm" type="video/webm"/>
+		Tu navegador no soporta esta característica :'(
+	</video>
+	<audio controls  >
+		<source src="media/audio/musica.mp3" type="audio/mp3"/>
+		tu navegador no soporta esta 
+	</audio>
+		<audio controls  >
+		<source src="media/audio/audiohtml5.mp4" type="audio/mp4"/>
+		tu navegador no soporta esta 
+	</audio>
+</body>
+</html>
