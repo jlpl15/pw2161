@@ -9,6 +9,7 @@ pseudoelementos
 En ese orden*/
 body
 {
+	font-family: 'Shadows Into Light', cursive;
 	background: rgb(100,100,100); /*fondo*/
 	max-width: 1024px; /*ancho maximo*/
 	margin:0 auto; /*el cero inidica que no hya movimiento arriba o abajo
@@ -17,6 +18,7 @@ body
 }
 header
 {
+	font-family: 'Amatic SC', cursive;
 	background: #0080FF;     /*fondo */       
 	border: 1px solid black; /*alrededor*/
 	border-radius: 10px; /*esquinas*/
@@ -34,11 +36,13 @@ width: 80px;
 }
 header h1
 {
+font-family: 'Roboto', sans-serif;
 text-align: center;
 text-shadow: 5px 5px 10px blue;
 }
 header nav ul li
 {
+font-family: 'Shadows Into Light', cursive;
 border: 1px solid red;
 border-radius: 5px;
 box-shadow: 5px 5px black;
@@ -61,6 +65,7 @@ header nav ul li:hover
 }
 #seccion1 article
 {
+	font-family: 'Shadows Into Light', cursive;
 	border: 10px solid black;
 	display: inline-block;
 	vertical-align: top;
