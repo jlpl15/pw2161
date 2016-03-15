@@ -52,3 +52,36 @@ header nav ul li
 	margin-top: 10px;
 	width: 98%
 }
+#seccion02
+{
+	margin: 0 auto;
+}
+#seccion02 article
+{
+
+	display: inline-block;
+	width: 32.8%;
+	vertical-align: top;
+}
+.otraSeccion,.UnaSeccion
+{
+font-weight: bold;
+}
+.otraSeccion
+{
+	font-size: 3.5em;
+	
+}
+.UnaSeccion
+{
+	font-size: 4.5em;
+	
+}
+#seccion02 article input
+{
+	color: blue;
+	background: white;
+	border-radius: 5px;
+	margin-left: 45%;
+	
+}
