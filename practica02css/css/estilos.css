@@ -1,0 +1,84 @@
+body
+{
+	border:1px solid red;
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 1078px;/*El diseñador lo qizo, pero debe de ser 1024*/
+}
+header input
+{
+	float:right;
+	margin-right: -21%;
+	position: relative;
+}
+header nav
+{
+	margin-left:220px;
+
+}
+header nav ul li
+{
+	border-bottom: 1px solid gray;
+	color:gray;
+	display: inline-block;
+	font-size: 1.2em;
+	margin-right: 15px;
+
+}
+#bgoffer
+{
+	left: 20%;
+	/*left*,right,bottom right*/
+	position: absolute;
+	top:130px;
+}
+#granthams
+{
+	margin-top: 20px;
+	margin-left: 25px;
+}
+#paint
+{
+float: right;
+margin-top: 20px;
+}
+#primerSeccion
+{
+	margin-top: 80px;
+}
+#primerSeccion article
+{
+
+display:inline-block;
+margin-left: 25px;
+vertical-align: top;
+}
+#seccion01art01
+{
+	width: 60%;
+}
+#seccion01art02
+{
+	width: 30%;
+}
+#segundaSeccion article
+{
+	text-align: right;
+}
+#terceraSeccion article img
+{
+	vertical-align: middle;
+}
+.numerotelefono
+{
+	color:#FF0099;
+	font-size: 2.5em;
+	font-weight: bold;
+}
+.wecanoffer
+{
+	color:#FF0099;
+	font-size: 3.5em;
+	font-weight: bold;
+
+}
