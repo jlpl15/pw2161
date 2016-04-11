@@ -38,6 +38,10 @@ header nav ul li
 	display:inline-block; /*Para romper el modelo de cajas*/
 	margin-right: 20px;
 }
+#buy
+{
+	margin-left: 200px;
+}
 #logo
 {
 	margin-top: -250px
