@@ -1,0 +1,25 @@
+body {
+	margin: 0 auto;
+	width: 1024px;
+}
+table tr td{
+	width: 100px;
+	height: 100px;
+}
+table{
+	border-collapse: collapse;
+}
+
+#td1, #td2, #td3{
+	border-bottom: 4px solid black;
+}
+
+#td7, #td8, #td9{
+	border-top: 4px solid black;
+}
+#td1, #td4, #td7{
+	border-right: 4px solid black;
+}
+#td3, #td6, #td9{
+	border-left: 4px solid black;
+}
