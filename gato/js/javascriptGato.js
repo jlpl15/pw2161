@@ -6,7 +6,24 @@ var cuentaJugadas = 0;
 
 function iniciaGato()
 {
-	//working on it
+	//eliminar variable de localstorage
+	//localStorage.removeItem("webCuentaJuego")
+	//preguntar si el navegador es compatible con local storage
+	if(typeof(Storage) != "undefined")
+	{
+		if(localStorage.webCuentaJuego)
+		{
+			cuentaJuego = parseInt(localStorage.webCuentaJuego);
+			cuentaJuego = cuentaJuego + 1;
+		}
+		else
+		{
+			cuentaJuego = 1;
+		}
+		document.getElementById("tituloJuego").innerHTML = "Juego del Gato (#"+cuentaJuego+")";
+	}
+	else
+		alert("No tienes un navegador que sirva, actualizate morro. Te hace falta barrio")
 }
 function validaJugada(letra){
 	var ganador = false;
@@ -42,10 +59,12 @@ function validaJugada(letra){
 	if(ganador == true)//if(ganador)
 		{
 			alert("THE WINNER IS: " + letra)
+			localStorage.webCuentaJuego = cuentaJuego;
 		}
 		else if(ganador == false && cuentaJugadas == 9 )
 		{
 			alert("EMPATE (?)")
+			localStorage.webCuentaJuego = cuentaJuego;
 		}
 	
 }
@@ -65,4 +84,8 @@ function escribe(casilla)
 	cuentaJugadas = cuentaJugadas + 1;
 	//para saber qien ganó, validamos la jugada
 	validaJugada(letra);
+}
+function reinicia()
+{
+	localStorage.removeItem("webCuentaJuego");
 }
