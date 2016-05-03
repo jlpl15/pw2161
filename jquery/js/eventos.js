@@ -13,7 +13,22 @@ var inicio = function()
 	}
 	var clicBoton2 = function()
 	{
-		alert("botón 2");
+		$.ajax({
+			beforeSend:function(){
+				console.log("Espere...")
+			},
+ 	 	  url: 'https://randomuser.me/api/',
+ 	 	  dataType: 'json',
+ 	 	  success: function(data){
+    		console.log(data);
+    		alert(data.results[0].name.first+
+    			  " "+data.results[0].name.last);
+  		  },
+  		  error:function(xhr,error,throws){
+  		  	console.log("Ocurrió un error");
+  		  }
+	  });
+      
 	}
 	var teclaInput = function(tecla)
 	{
