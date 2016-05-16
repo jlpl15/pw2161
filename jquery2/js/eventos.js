@@ -33,6 +33,15 @@ var iniciaApp = function()
 				url:"php/funciones.php",
 				data: parametros,
 				success: function(response){
+					if(response.respuesta)
+					{
+						("$datosUsuario").hide();
+						$("nav").show("slow");
+					}
+					else
+					{
+						alert("usuario y/o contraseña incorrecto(s)");
+					}
 
 				},
 				error: functin(xhr,ajaxOptionx,throwError){
