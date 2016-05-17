@@ -24,18 +24,18 @@ var iniciaApp = function()
 						 "&clave="+clave+
 						 "&id="+Math.random();
 		$.ajax({
-			beforeSend:function();
-				console.loh("validar el usuario")
+			beforeSend:function(){
+				console.log("validar el usuario");
 				},
-				cache: false;
-				type: "POST";
+				cache: false,
+				type: "POST",
 				dataType: "json",
 				url:"php/funciones.php",
 				data: parametros,
 				success: function(response){
 					if(response.respuesta)
 					{
-						("$datosUsuario").hide();
+						$("#datosUsuario").hide();
 						$("nav").show("slow");
 					}
 					else
@@ -44,7 +44,7 @@ var iniciaApp = function()
 					}
 
 				},
-				error: functin(xhr,ajaxOptionx,throwError){
+				error: function(xhr,ajaxOptionx,thrownError){
 					console.log("Algo salió mal");
 				}
 		});

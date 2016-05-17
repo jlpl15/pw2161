@@ -46,10 +46,10 @@ function validaEntrada()
 	//devolvemos el resultado al JS
 	print json_encode($salidaJson);
 }
-$accion = $_POST["accion"]
+$accion = $_POST["accion"];
 //menu principal
 switch ($accion) {
-	case 'validaEntrada':
+	case 'validarEntrada':
 		validaEntrada();
 		break;
 	
@@ -57,4 +57,5 @@ switch ($accion) {
 		# code...
 		break;
 }
+
  ?>

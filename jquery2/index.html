@@ -39,6 +39,27 @@
 				</article>
 			</article>
 		</section>
+		<section>
+			<article id="altaUsuarios">
+				<h2>Alta de usuarios</h2>
+				<form action="#" id="frmAltaUsuarios">
+					<input type="text" class="form-control" id="txtNombreUsuario" 
+					name="txtNombreUsuario"placeholder="Usuario" required>
+					<input type="password" class="form-control" id="txtClaveUsuario"
+					name="txtClaveUsuario" placeholder="Clave" required>
+					<input type="password" class="form-control" id="txtConfirmarClaveUsuario"
+					name="txtConfirmarClaveUsuario" placeholder="Confirmar Clave" required>
+					<select name="txtTipoUsuario" id="txtTipoUsuario" class="form-control">
+						<option value="vigente">Vigente</option>
+						<option value="baja">Baja</option>
+					</select>
+					<input type="text" class="form-control" id="txtDepartamentoUsuario" 
+					name="txtDepartamentoUsuario" placeholder="Departamento" required>
+					<input type="submit" class="btn btn-success btn-lg btn-lock" id="btnAltaUsuario"
+					 name="btnAltaUsuario"placeholder="Usuario" required>
+				</form>
+			</article>
+		</section>
 	</main>
 	<footer></footer>
 	<!-- Las funcionalidades se cargan al ultimo para que la pagina cargue más rapido -->
