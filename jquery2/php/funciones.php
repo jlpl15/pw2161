@@ -46,11 +46,37 @@ function validaEntrada()
 	//devolvemos el resultado al JS
 	print json_encode($salidaJson);
 }
+function guardaUsuario()
+{
+	$usuario = GetSQLValueString($_POST["txtNombreUsuario"],"text");
+	$clave   = GetSQLValueString(md5($_POST["txtClaveUsuario"]),"text");
+	$tipo    = GetSQLValueString($_POST["txtTipoUsuario"],"text");
+	$departamento = GetSQLValueString($_POST["txtDepartamento"],"long");
+	$respuesta = false;
+	//conecto al servidor de BD
+	$conexion = mysql_connect("localhost","root","");//servidor,usuario y clave
+	//seleccionar base de datos
+	mysql_select_db("cursopw");
+	//se hace la consulta insert
+	$guarda = sprintf("insert into usuarios values(%s,%d,%s,%s)",$clave,$departamento,$tipo,$usuario);
+	//ejecutamos la consulta
+	mysql_query($guarda);
+	//cuantos registros fueron afectados
+	if(mysql_affected_rows() > 0)
+	{
+		$respuesta = true;
+	}
+	$salidaJson = array('respuesta' => $respuesta);
+	print json_encode($salidaJson);
+}
 $accion = $_POST["accion"];
 //menu principal
 switch ($accion) {
 	case 'validarEntrada':
 		validaEntrada();
+		break;
+	case 'guardaUsuario':
+		guardaUsuario();
 		break;
 	
 	default:
