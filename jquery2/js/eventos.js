@@ -54,12 +54,18 @@ var iniciaApp = function()
 	{
 		//mostramos el formulario
 		$("#altaUsuarios").show("slow");
+		$("#altaUsuarios h2").html("Alta Usuarios")
+		//desactivo la funcion de bajaUsuario
+		$("frmAltaUsuarios").off("submit",BajaUsuario);
+		//enciendo la funcion de bajaUsuario para el mismo boton
+		$("frmAltaUsuarios").on("submit",AltaUsuario);
+
 	}
 
 	var AltaUsuario = function()
 	{
 		event.preventDefault();
-		alert($("#frmAltaUsuarios").serialize());
+		//alert($("#frmAltaUsuarios").serialize());
 		var datos = $("#frmAltaUsuarios").serialize();
 		var parametros = "accion=guardaUsuario&"+datos+
 						 "&id"+Math.random();
@@ -86,8 +92,50 @@ var iniciaApp = function()
 				}
 		});
 	}
+	var Bajas = function()
+	{
+		$("#altaUsuarios").show("slow");
+		$("#altaUsuarios h2").html("Baja Usuarios")
+		//desactivo la funcion de altaUsuario
+		$("frmAltaUsuarios").off("submit",AltaUsuario);
+		//enciendo la funcion de bajaUsuario para el mismo boton
+		$("frmAltaUsuarios").on("submit",BajaUsuario);
+	}
+
+	var BajaUsuario = function()
+	{
+		event.preventDefault();
+		//var datos = $("#frmAltaUsuarios").serialize();
+		var datos = $("#txtNombreUsuario").val();
+		var parametros = "accion=bajaUsuario&"+datos+
+						 "&id"+Math.random();
+		$.ajax({
+			beforeSend:function(){
+				console.log("validar el usuario");
+				},
+				cache: false,
+				type: "POST",
+				dataType: "json",
+				url:"php/funciones.php",
+				data: parametros,
+				success: function(response){
+					if(response.respuesta ==true)
+					{
+						alert("Usuario dado de baja correctamente");
+					}
+					else
+					{
+						alert("No se pudo eliminar la informacion");
+					}
+				},
+				error: function(xhr,ajax,thrownError){
+				}
+		});
+	}
+
 	$("#frmValidaEntrada").on("submit",validarEntrada);
-	$("#btnAltas").on("click",Altas)
+	$("#btnAltas").on("click",Altas);
 	$("frmAltaUsuarios").on("submit",AltaUsuario);
+	$("#btnBajas").on("click",Bajas);
 }
 $(document).on("ready",iniciaApp);
