@@ -106,7 +106,7 @@ var iniciaApp = function()
 	{
 		event.preventDefault();
 		//var datos = $("#frmAltaUsuarios").serialize();
-		var datos = $("#txtNombreUsuario").val();
+		var datos = "txtNombreUsuario="+$("#txtNombreUsuario").val();
 		var parametros = "accion=bajaUsuario&"+datos+
 						 "&id"+Math.random();
 		$.ajax({
