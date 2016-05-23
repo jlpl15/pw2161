@@ -132,10 +132,41 @@ var iniciaApp = function()
 				}
 		});
 	}
+	var consultas = function()
+	{
+		$("consultasUsuarios").show("slow");
+		var parametros = "accion=consultas"+
+						 "&id="+Math.random();
+		$.ajax({
+			beforeSend:function(){
+				console.log("Consultas de  usuario");
+				},
+				cache: false,
+				type: "POST",
+				dataType: "json",
+				url:"php/funciones.php",
+				data: parametros,
+				success: function(response){
+					if(response.respuesta ==true)
+					{
+						$("#tablaConsultas").html(response.tabla);//limpiamos la tabla
+					}
+					else
+					{
+						alert("No se pudo eliminar la informacion");
+					}
+				},
+				error:function(xhr,ajax,thrownError){
+					console.log("Ha ocurrido un error");
+			    }
+		});
+
+	}
 
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("frmAltaUsuarios").on("submit",AltaUsuario);
 	$("#btnBajas").on("click",Bajas);
+	$("#btnConsultas").on("click",consultas);
 }
 $(document).on("ready",iniciaApp);
