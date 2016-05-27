@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Prueba examen</title>
+	<link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilos.css">
+	<script src="js/jquery-2.2.3.js"></script>
+	<script src="js/eventos.js "></script>
+</head>
+<body>
+	<header>
+	<h1>Encuestas</h1>
+		<nav>
+			<ul>
+				<li><button id="btnAltas" name="btnAltas" class="btn btn-primary">Altas</button></li>
+				<li><button id="btnBajas" name="btnBajas" class="btn btn-danger">Bajas</button></li>
+				<li><button id="btnCambios" name="btnCambios" class="btn btn-warning">Cambios</button></li>
+				<li><button id="btnConsultas" name="btnConsultas" class="btn btn-primary">Consultas</button></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<section>
+			<article>
+				<article class="panel panel-primary" id="altaEncuesta">
+				  <article class="panel-heading">
+				  	<h3>Alta de la encuesta</h3>
+				  </article>
+				  <article class="panel-body">
+				    <form action="" id="frmAlta" name="frmAlta"> <!-- es necsario un submit para que form se accione -->
+				    	<input type="text" class="form-control" id="txtclave" name="txtclave" placeholder="Clave"><br>
+				    	<input type="text" class="form-control" id="txtnombreencuesta" name="txtnombreencuesta" placeholder="Nombre Encuesta"><br>
+				    	<input type="text" class="form-control" id="txtpregunta1" name="txtpregunta1" placeholder="Pregunta 1"><br>
+				    	<input type="text" class="form-control" id="txtrespuesta1" name="txtrespuesta1" placeholder="Respuesta 1"><br>
+				    	<input type="text" class="form-control" id="txtpregunta2" name="txtpregunta2" placeholder="Pregunta 2"><br>
+				    	<input type="text" class="form-control" id="txtrespuesta2" name="txtrespuesta2" placeholder="Respuesta 2"><br>
+				    	<input type="text" class="form-control" id="txtpregunta3" name="txtpregunta3" placeholder="Pregunta 3"><br>
+				    	<input type="text" class="form-control" id="txtrespuesta3" name="txtrespuesta3" placeholder="Respuesta3"><br>
+				    	<input type="text" class="form-control" id="txtfechaencuesta" name="txtfechaencuesta" placeholder="Fecha Encuesta"><br>
+				    	<input type="text" class="form-control" id="txtsemestre" name="txtsemestre" placeholder="Semestre"><br>
+				    	<input type="submit" class="btn btn-success btn-lg btn-lock" id="btnAlta" name="btnAlta" value="Guardar">
+				    </form>
+				  </article>
+				</article>
+			</article>
+			<article>
+				<article class="panel panel-primary" id="bajaEncuesta">
+				  <article class="panel-heading">
+				  	<h3>Baja de la encuesta</h3>
+				  </article>
+				  <article class="panel-body">
+				    <form action="" id="frmBaja" name="frmBaja"> <!-- es necsario un submit para que form se accione -->
+				    	<input type="text" class="form-control" id="bajaclave" name="najaclave" placeholder="Clave"><br>
+				    	<input type="submit" class="btn btn-success btn-lg btn-lock" id="btnBaja" name="btnBaja" value="Baja">
+				    </form>
+				  </article>
+				</article>
+			</article>
+			<article>
+				<article class="panel panel-primary" id="cambioEncuesta">
+				  <article class="panel-heading">
+				  	<h3>Cambio de la encuesta</h3>
+				  </article>
+				  <article class="panel-body">
+				    <form action="" id="frmCambio" name="frmCambio"> <!-- es necsario un submit para que form se accione -->
+				    	<input type="text" class="form-control" id="cambioclave" name="cambioclave" placeholder="Clave"><br>
+				    	<input type="text" class="form-control" id="cambionombreencuesta" name="cambionombreencuesta" placeholder="Nombre Encuesta"><br>
+				    	<input type="text" class="form-control" id="cambiopregunta1" name="cambiopregunta1" placeholder="Pregunta 1"><br>
+				    	<input type="text" class="form-control" id="cambiorespuesta1" name="cambiorespuesta1" placeholder="Respuesta 1"><br>
+				    	<input type="text" class="form-control" id="cambiopregunta2" name="cambiopregunta2" placeholder="Pregunta 2"><br>
+				    	<input type="text" class="form-control" id="cambiorespuesta2" name="cambiorespuesta2" placeholder="Respuesta 2"><br>
+				    	<input type="text" class="form-control" id="cambiopregunta3" name="cambiopregunta3" placeholder="Pregunta 3"><br>
+				    	<input type="text" class="form-control" id="cambiorespuesta3" name="cambiorespuesta3" placeholder="Respuesta3"><br>
+				    	<input type="text" class="form-control" id="cambiofechaencuesta" name="cambiofechaencuesta" placeholder="Fecha Encuesta"><br>
+				    	<input type="text" class="form-control" id="cambiosemestre" name="cambiosemestre" placeholder="Semestre"><br>
+				    	<input type="submit" class="btn btn-success btn-lg btn-lock" id="btnCambio" name="btnCambio" value="Cambio">
+				    </form>
+				  </article>
+				</article>
+			</article>
+			<article class="panel panel-primary" id="ConsultaEncuesta">
+				  <article class="panel-heading">
+				  	<h3>Consulta de la encuesta</h3>
+				  </article>
+				  <article id="consultaEncuesta">
+					<table class="table table-striped" name="tablaConsultas" id="tablaConsultas"></table>
+				  </article>
+			</article>
+		</section>
+	</main>
+</body>
+</html>

@@ -1,0 +1,26 @@
+body 
+{
+	font-size: 16px;
+	margin: 0 auto;
+	max-width: 1024px;
+}
+header nav
+{
+	/*display: none; desaparece el elemento, Visivility deja un */
+	text-align: center;
+}
+header nav ul li
+{
+	display: inline-block;
+}
+header nav ul li button
+{
+	width: 89px;
+}
+
+#bajaEncuesta, #cambioEncuesta, #ConsultaEncuesta, #altaEncuesta
+{
+	display: none;
+	margin: 0 auto;
+	width: 320px;
+}
